@@ -1,8 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const Footer = () => {
+const Footer = (props) => {
 return <View style={styles.viewStyle}>
+{props.children}
 </View>
 };
 

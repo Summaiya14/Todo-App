@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppRegistry, View, Text } from 'react-native';
+import { AppRegistry, View, Text, TextInput } from 'react-native';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import Button from './src/components/Button';
+import Input from './src/components/Input';
 
 
 const App = () => {
@@ -10,7 +11,12 @@ const App = () => {
 	return <View> 
 	<View style={styles.viewStyle} >
 		<Header headerText='-NOTES-'/>
-		<Footer />
+		<Footer>
+		<Input 
+		placeholder='>note'
+		placeholderTextColor='white'
+		/>
+		</Footer>
 	</View>
 
 	<View>
