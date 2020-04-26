@@ -21,7 +21,7 @@ const styles = {
 		zIndex: 11,
 		width: 60,
 		height: 60,
-		top: 540
+		top: 420
 	},
 
 	textStyle: {

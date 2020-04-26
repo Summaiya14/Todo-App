@@ -1,33 +1,27 @@
 import React from 'react';
-import { AppRegistry, View, Text, TextInput } from 'react-native';
+import { AppRegistry, View, Text, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import Button from './src/components/Button';
 import Input from './src/components/Input';
-
+import Notes from './src/components/Notes';
 
 const App = () => {
 
-	return <View> 
+	return ( 
+	<TouchableWithoutFeedback onPress={() => {
+	Keyboard.dismiss();
+	console.log('dismiss')
+	}} >
 	<View style={styles.viewStyle} >
-		<Header headerText='-NOTES-'/>
-		<Footer>
-		<Input 
-		placeholder='>note'
-		placeholderTextColor='white'
-		/>
-		</Footer>
+		<Header headerText='-TODO APP-'/>
+		<Notes />
 	</View>
-
-	<View>
-	    <Button buttonText='+'/>
-    </View>
-
-	</View>
+	</TouchableWithoutFeedback>
 
 	
-
-		
+);
+	
 };
 
 const styles= {
